@@ -42,8 +42,10 @@ src/
 ```
 
 ## Como rodar o projeto
+git clone https://github.com/GabrielBraga15/ivare-front-end.git
 
 ```bash
+cd .\mapa-locais-favoritos\
 npm install
 npm run dev
 ```
