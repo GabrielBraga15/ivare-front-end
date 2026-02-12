@@ -10,13 +10,15 @@ export default function FavoritesList() {
   const setMarker = useMapStore((s) => s.setMarker);
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-4">
-      <div className="flex items-center justify-between">
-        <div className="text-base font-semibold text-slate-900">Favoritos</div>
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+      <div className="flex items-center justify-between ">
+        <div className="text-base font-semibold text-slate-900 dark:text-slate-100">
+          Favoritos
+        </div>
         <button
           type="button"
           onClick={clearFavorites}
-          className="text-xs font-semibold text-slate-600 hover:text-slate-900"
+          className="text-xs font-semibold  text-slate-600 dark:hover:text-slate-300 dark:text-slate-100 hover:text-slate-900"
           disabled={!favorites.length}
         >
           Limpar
@@ -24,11 +26,11 @@ export default function FavoritesList() {
       </div>
 
       {!favorites.length ? (
-        <div className="mt-3 rounded-xl border border-dashed border-slate-200 p-4 text-sm text-slate-600">
+        <div className="mt-3 rounded-xl border dark:text-slate-100 border-dashed border-slate-200 p-4 text-sm text-slate-600">
           Nenhum favorito salvo ainda.
         </div>
       ) : (
-        <div className="mt-3 flex flex-col gap-2">
+        <div className="mt-3 flex flex-col gap-2 ">
           {favorites.map((f) => (
             <div
               key={f.id}
@@ -42,10 +44,10 @@ export default function FavoritesList() {
                 }}
                 className="flex-1 text-left"
               >
-                <div className="text-sm font-semibold text-slate-900">
+                <div className="text-sm font-semibold text-slate-900 dark:text-slate-100">
                   {f.name}
                 </div>
-                <div className="text-xs text-slate-600">
+                <div className="text-xs text-slate-600 dark:text-slate-100">
                   {f.lat.toFixed(6)}, {f.lng.toFixed(6)}
                 </div>
               </button>
@@ -53,7 +55,7 @@ export default function FavoritesList() {
               <button
                 type="button"
                 onClick={() => removeFavorite(f.id)}
-                className="rounded-lg border border-slate-200 px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+                className="dark:text-slate-100 rounded-lg border border-slate-200 px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
               >
                 Remover
               </button>

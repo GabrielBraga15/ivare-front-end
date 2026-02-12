@@ -42,16 +42,16 @@ export default function SearchBox() {
 
   return (
     <div className="w-full">
-      <label className="block text-sm font-medium text-slate-700">
+      <label className="block text-sm font-medium text-slate-700 dark:text-slate-100">
         Buscar endereço ou local
       </label>
 
-      <div className="mt-2 relative">
+      <div className="mt-2 relative ">
         <input
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Ex: Praça Tubal Vilela"
-          className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-300 focus:ring-4 focus:ring-slate-100"
+          className="w-full rounded-xl border  border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-slate-300 focus:ring-4  focus:ring-slate-100 dark:text-slate-100  dark:border-slate-800 dark:bg-slate-900"
         />
 
         <div
@@ -96,10 +96,12 @@ export default function SearchBox() {
                   setCenter(r.lat, r.lng, 16);
                   setMarker(r.lat, r.lng);
                 }}
-                className="w-full px-4 py-3 text-left text-sm transition hover:bg-slate-50 active:bg-slate-100"
+                className="w-full  dark:text-slate-100  dark:border-slate-800 dark:bg-slate-900 px-4 py-3 text-left text-sm transition hover:bg-slate-50 active:bg-slate-100"
               >
-                <div className="font-medium text-slate-800">Ir para</div>
-                <div className="mt-1 text-xs text-slate-600 line-clamp-2">
+                <div className="font-medium text-slate-800  dark:text-slate-100  dark:border-slate-800 dark:bg-slate-900">
+                  Ir para
+                </div>
+                <div className="mt-1 text-xs dark:text-slate-100 text-slate-600 line-clamp-2">
                   {r.displayName}
                 </div>
               </button>
