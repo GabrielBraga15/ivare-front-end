@@ -68,9 +68,3 @@ npm run preview
 - **Zustand** mantém estado global simples e persistente para favoritos.
 - **TailwindCSS** permite construção rápida de layout responsivo e suporte nativo a tema escuro.
 
-## Melhorias futuras
-
-- Autocomplete avançado de endereços
-- Animações adicionais de interface
-- Backend opcional para persistência remota de favoritos
-- Compartilhamento de locais via link
