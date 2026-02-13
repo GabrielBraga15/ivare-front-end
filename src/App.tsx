@@ -12,8 +12,8 @@ export default function App() {
     <div className="relative min-h-dvh">
       <BackgroundDecor />
       <header
-        className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur
-                   dark:border-slate-800/70 dark:bg-slate-950/70"
+        className=" top-0 z-9999 relative transform-gpu border-b border-slate-200/70 bg-white/80 backdrop-blur
+             dark:border-slate-800/70 dark:bg-slate-950/70"
       >
         <div className="mx-auto max-w-6xl px-4 py-4">
           <div className="flex items-start justify-between gap-4">
