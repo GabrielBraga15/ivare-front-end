@@ -44,13 +44,9 @@ export default function MapView({ theme }: { theme: "light" | "dark" }) {
 
   return (
     <div className="h-[60vh] w-full overflow-hidden rounded-2xl border border-slate-200 bg-white md:h-[72vh] dark:border-slate-800 dark:bg-slate-900">
-      <MapContainer
-        key={theme}
-        center={mapCenter}
-        zoom={zoom}
-        className="h-full w-full"
-      >
+      <MapContainer center={mapCenter} zoom={zoom} className="h-full w-full">
         <TileLayer
+          key={theme}
           attribution="&copy; OpenStreetMap &copy; CARTO"
           url={
             theme === "dark"
