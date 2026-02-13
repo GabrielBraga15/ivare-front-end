@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import "leaflet/dist/leaflet.css";
+import "./leafletIcons";
 import App from "./App";
 import { QueryProvider } from "./app/QueryProvider";
 

@@ -10,6 +10,8 @@ import type { LatLngExpression } from "leaflet";
 import { useEffect } from "react";
 import { useMapStore } from "../stores/map.store";
 
+
+
 function FlyTo({ center, zoom }: { center: LatLngExpression; zoom: number }) {
   const map = useMap();
 
